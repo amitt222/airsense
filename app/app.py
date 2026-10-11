@@ -9,6 +9,7 @@ from pathlib import Path
 # Add project root and app directory to sys.path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 APP_DIR = Path(__file__).resolve().parent
+MODELS_DIR = PROJECT_ROOT / "models"
 
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
@@ -109,7 +110,14 @@ except Exception as e:
 
 
 # Sidebar Controls
-st.sidebar.image("https://img.icons8.com/clouds/200/air-quality.png", width=110)
+st.sidebar.markdown(
+    """
+    <div style="text-align: center; margin-top: -15px; margin-bottom: 5px;">
+        <span style="font-size: 52px;">🌬️</span>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 st.sidebar.title("AirSense")
 st.sidebar.caption("AI-Powered Air Quality Forecasting & Health Alert Platform")
 
