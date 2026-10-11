@@ -6,10 +6,14 @@ Air Quality Forecasting & Health Alert Platform for Indian Cities
 import sys
 from pathlib import Path
 
-# Add project root to sys.path so 'src' and 'app' packages are accessible
+# Add project root and app directory to sys.path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+APP_DIR = Path(__file__).resolve().parent
+
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
+if str(APP_DIR) not in sys.path:
+    sys.path.insert(0, str(APP_DIR))
 
 import folium
 import numpy as np
@@ -19,14 +23,24 @@ import plotly.graph_objects as go
 import streamlit as st
 from streamlit_folium import st_folium
 
-from app.utils import (
-    CITY_LOCATIONS,
-    generate_city_forecasts,
-    get_latest_city_status,
-    load_dataset,
-    load_features_dataset,
-    load_models_and_columns,
-)
+try:
+    from app.utils import (
+        CITY_LOCATIONS,
+        generate_city_forecasts,
+        get_latest_city_status,
+        load_dataset,
+        load_features_dataset,
+        load_models_and_columns,
+    )
+except (ModuleNotFoundError, ImportError):
+    from utils import (
+        CITY_LOCATIONS,
+        generate_city_forecasts,
+        get_latest_city_status,
+        load_dataset,
+        load_features_dataset,
+        load_models_and_columns,
+    )
 from src.advisory import (
     CPCB_SCALE,
     calculate_outdoor_safety_score,
