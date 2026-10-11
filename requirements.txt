@@ -1,0 +1,31 @@
+# AirSense - Dependencies
+# Python 3.11+
+
+# Core Data Science & Numerical Computing
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Machine Learning & Explainability
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+lightgbm>=4.0.0
+shap>=0.44.0
+joblib>=1.3.0
+
+# Visualization & Exploratory Data Analysis
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.18.0
+
+# Web Application & Mapping
+streamlit>=1.30.0
+folium>=0.15.0
+streamlit-folium>=0.16.0
+
+# API Requests & Environment Management
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Optional Time-Series & Statistical Baselines
+statsmodels>=0.14.0

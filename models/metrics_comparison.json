@@ -1,0 +1,38 @@
+[
+  {
+    "Model": "LightGBM Regressor",
+    "MAE": 15.66,
+    "RMSE": 27.0,
+    "R2": 0.8977,
+    "MAPE (%)": 13.25,
+    "MAE Improvement (%)": 14.98,
+    "RMSE Improvement (%)": 20.56
+  },
+  {
+    "Model": "XGBoost Regressor",
+    "MAE": 15.7,
+    "RMSE": 26.9,
+    "R2": 0.8984,
+    "MAPE (%)": 13.28,
+    "MAE Improvement (%)": 14.77,
+    "RMSE Improvement (%)": 20.86
+  },
+  {
+    "Model": "Naive Persistence (t-1)",
+    "MAE": 18.42,
+    "RMSE": 33.99,
+    "R2": 0.8378,
+    "MAPE (%)": 13.97,
+    "MAE Improvement (%)": 0.0,
+    "RMSE Improvement (%)": 0.0
+  },
+  {
+    "Model": "PyTorch LSTM (Comparison)",
+    "MAE": 19.87,
+    "RMSE": 31.68,
+    "R2": 0.8591,
+    "MAPE (%)": 17.13,
+    "MAE Improvement (%)": -7.87,
+    "RMSE Improvement (%)": 6.8
+  }
+]
